@@ -29,7 +29,7 @@ function IconList() {
         icon={phoneIcon}
         heading={"All in One"}
         text={
-          "Discover Attendees and Live Streams for Upcoming Events Instantly"
+          "Discover Attendees and Live Streams for Upcoming Events instantly"
         }
       ></ListItem>
 

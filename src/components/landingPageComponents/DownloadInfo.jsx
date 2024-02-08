@@ -33,7 +33,7 @@ const DownloadInfo = ({ duration, scrollFreshhold }) => {
       }}
     >
       <div id="see-who-is-going-label">
-        "Look! Sam, Joe and Emma are all
+        "Look! Jack, Emma and Kayla are all
         <br /> going to this week's basketball game"
       </div>
       <div id="ios-download-button">

@@ -16,25 +16,25 @@ const phoneScreen2 = {
   number: "2",
   image: orgApproved,
   heading: "Organization Setup",
-  text: "add your organization to the platform (once approved you will now be the organization admin for selected organization)",
+  text: "Add your organization to the platform (once approved you will be the organization admin for selected organization)",
 };
 const phoneScreen3 = {
   number: "3",
   image: teams,
   heading: "Add Teams",
-  text: "add all of your organizations different teams",
+  text: "Add all of your organization's different teams",
 };
 const phoneScreen4 = {
   number: "4",
   image: teamManagement,
   heading: "Team Management",
-  text: "set up schedule for each team (you can invite other users (coaches, assistant coaches or any other user) to help create/edit your schedule",
+  text: "Set up a schedule for each team. You can invite other users (coaches, assistant coaches, or any other user) to help create or edit your schedule",
 };
 const phoneScreen5 = {
   number: "5",
   image: homeScreen,
   heading: "Home Screen",
-  text: "all done (you should now be able to see your events in your organizations calender!)",
+  text: "All done! You should now be able to see your events in your organization's calendar",
 };
 
 function AppExampleScreen() {
