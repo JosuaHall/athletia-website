@@ -1,38 +1,578 @@
 .App {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+
+
+
+p {
+  font-size: 12px;
+  color: #fff;
+}
+
+
+/* ===================== HEADER STYLE ===================== */
+.header {
+  /*background-color: black;*/
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  }
+
+.header img {
+  width: 50px;
+}
+/* ======================================================== */
+
+/* ================== LANDING PAGE STYLE ================== */
+.landing-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100% !important;
+}
+
+
+
+#app-objective-label {
+  position: absolute;
+  color: #fff;
+  padding: .3em .5em;
+  border-radius: 10px;
+  letter-spacing: 5px;
+  z-index: 2;
+  top: 45%;
+  font-size:xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Mono";
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#iphone-grafic{
+  position: relative;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.download-info-area{
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  left: 50%;
+  top: 43%;
+}
+.download-info-area img {
+  width: 150px;
+}
+#see-who-is-going-label{
+  font-weight: bold;
+  font-size: larger;
+  font-family: "Roboto Mono";
+  letter-spacing: 2px;
+  color: rgb(247 191 46);
+}
+#ios-download-button{
+  width: 100;
+  padding-top: 2em;
+}
+#ios-download-button  :hover{
+  cursor: pointer;
+}
+#download-barcode{
+  width: 100;
+
+}
+#download-barcode img {
+  border-radius: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*================================================*/
+
+
+/* ============== ICONLIST STYLES ================ */
+.icon-list-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  gap: 2em;
+  padding: 2em;
+  margin-top: 10em;
+}
+
+.icon-list-grid-container :nth-child(2){
+  margin-bottom: 3em;
+}
+
+
+/*list-item-styles*/
+.list-item{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
+}
+.list-item-icon{
+
 }
 
-.App-link {
-  color: #61dafb;
+.list-item-text-area{
+
+}
+.list-item-heading{
+  color: #598BD8;
+}
+.list-item-text{
+  color: #F9FCFF;
+}
+/********************/
+
+
+
+/*=========================================*/
+
+
+
+/* ============== Phone Container STYLES =========== */
+.example-screens-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  max-width: 80%;
+  margin: 2em auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.phone-container {
+  position: relative; /* Add position relative for containing absolutely positioned elements */
+  transition: transform 0.3s ease-in-out; /* Smoother transition */
+  padding: .5em;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+
+.phone-container-img img {
+  width: 100%; /* Adjust image width to fit container */
+}
+
+.phone-container-text-area {
+  display:none;
+}
+
+.phone-container-number{
+  display: none;
+}
+
+
+.phone-container-text-area-heading {
+  color: #598BD8; 
+  margin: 0;
+}
+
+.phone-container-text-area-text {
+  margin: 0;
+  color: #fff
+}
+
+/* =============================================== */
+
+
+/* ============ Marketing Video Styles =========== */
+.marketing-video-area {
+  margin: auto;
+  height: 100vh;
+  position: relative;
+  
+}
+
+.marketing-video {
+  height: 100%;
+  filter: brightness(115%) hue-rotate(-4deg) saturate(100%);
+}
+
+/* =============================================== */ 
+
+
+
+/* ================  Impressum  ==================*/
+
+.impressum {
+  
+}
+
+
+/* ===============================================*/
+
+
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  #title {
+    padding-bottom: "3.5em";
+    padding: 0 .5em;
   }
+
+  /* ===================== HEADER STYLE ===================== */
+.header {
+  /*background-color: black;*/
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  }
+
+.header img {
+  width: 40px;
+  padding-left: 4px;
+}
+/* ======================================================== */
+
+/* ================== LANDING PAGE STYLE ================== */
+.landing-page {
+  width: 95% !important;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#iphone-grafic{
+  width: 50%;
+}
+
+#app-objective-label {
+  font-size: 18px;
+}
+
+
+.download-info-area{
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.download-info-area img {
+  width: 80%;
+  margin: auto;
+}
+#see-who-is-going-label{
+  font-weight: bold;
+  font-size: larger;
+  font-family: "Roboto Mono";
+  letter-spacing: 2px;
+  color: rgb(247 191 46);
+}
+#ios-download-button{
+  padding-top: 2em;
+}
+#ios-download-button img :hover{
+  cursor: pointer;
+}
+#download-barcode{
+  display: none;
+}
+#download-barcode img {
+  display: none;
+}
+
+/*================================================*/
+
+/* ============== ICONLIST STYLES ================ */
+.icon-list-grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 50vh;
+  gap: 2em;
+  padding: 2em;
+  margin-top: 10em;
+  height: 100vh;  
+}
+
+.icon-list-grid-container :nth-child(2){
+  margin-bottom: 0;
+}
+
+
+/*list-item-styles*/
+.list-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.list-item-icon{
+
+}
+
+.list-item-text-area{
+
+}
+.list-item-heading{
+  color: #598BD8;
+
+}
+.list-item-text{
+  color: #F9FCFF;
+  font-size: 14px;
+}
+/********************/
+
+/*=========================================*/
+
+
+/* ============== Phone Container STYLES =========== */
+.example-screens-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  width: 80%;
+  margin: auto;
+}
+
+
+
+.phone-container-img img {
+  width: 60%; /* Adjust image width to fit container */
+}
+
+.phone-container-text-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.phone-container-text-area-heading {
+  color: #598BD8; 
+  margin: 0;
+}
+
+.phone-container-text-area-text {
+  margin: 1em;
+  color: #fff
+}
+
+/* =============================================== */
+
+/* ============ Marketing Video Styles =========== */
+
+
+.marketing-video-area {
+  height: 100vh;
+  width: 100%;
+  margin:auto;
+  margin-top: 5em;
+}
+
+
+.marketing-video {
+  filter: brightness(115%) hue-rotate(-4deg) saturate(100%);
+}
+
+/* =============================================== */ 
+ 
+}
+
+
+
+
+
+/* For tablets and larger devices */
+@media only screen and (min-width: 768px) {
+  /* Add styles specific to tablets and larger devices */
+  #title {
+    padding-bottom: "3.5em";
+  }
+
+  /* ================== LANDING PAGE STYLE ================== */
+.landing-page {
+  width: 80% !important;
+  margin: auto;
+}
+#ios-download-button img :hover{
+  cursor: pointer;
+}
+/*================================================*/
+
+/* ============== Phone Container STYLES =========== */
+.example-screens-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.phone-container {
+  position: relative; /* Add position relative for containing absolutely positioned elements */
+  transition: transform 0.3s ease-in-out; /* Smoother transition */
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+
+.phone-container-img img {
+  padding-top: 10%;
+  padding-bottom: 20%;
+}
+
+.phone-container:hover {
+  transform: translateY(-50px); /* Move the card slightly upwards on hover */
+}
+
+
+.phone-container:hover .phone-container-text-area {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin-top: 1em;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.phone-container:hover .phone-container-text-area {
+  transform: translateY(0); /* Move text area up on hover */
+}
+
+
+/* =============================================== */
+
+}
+
+/* For desktops and larger devices */
+@media only screen and (min-width: 1024px) {
+  /* Add styles specific to desktops and larger devices */
+  #title {
+    padding-bottom: "3.5em";
+  }
+
+  #ios-download-button img :hover{
+    cursor: pointer;
+  }
+
+  /* ============== Phone Container STYLES =========== */
+.example-screens-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  max-width: 80%;
+  margin: auto;
+  height: 100vh;
+}
+
+.phone-container {
+  position: relative; /* Add position relative for containing absolutely positioned elements */
+  transition: transform 0.3s ease-in-out; /* Smoother transition */
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-container:hover {
+  transform: translateY(-70px); /* Move the card slightly upwards on hover */
+}
+
+
+.phone-container:hover .phone-container-text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  padding-top: 0em;
+  left: 0;
+  width: 100%;
+  transform: translateY(0); /* Add a slight offset to avoid overlap */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.phone-container-img img {
+  width: 100%; /* Adjust image width to fit container */
+}
+
+
+
+.phone-container:hover .phone-container-text-area {
+  transform: translateY(-10); /* Move text area up on hover */
+}
+
+.phone-container-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+.phone-container-text-area-heading {
+  color: #598BD8; 
+}
+
+.phone-container-text-area-text {
+  margin: 0;
+  color: #fff
+}
+
+/* =============================================== */
+}
+
+
+/* For desktops and larger devices */
+@media only screen and (min-width: 1324px) {
+  /* Add styles specific to desktops and larger devices */
+  #title {
+    padding-bottom: "3.5em";
+  }
+
+  #ios-download-button img :hover{
+    cursor: pointer;
+  }
+
+  /* ============== Phone Container STYLES =========== */
+.example-screens-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  max-width: 80%;
+  margin: auto;
+  height: 90vh;
+}
 }
