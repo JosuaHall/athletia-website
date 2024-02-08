@@ -396,6 +396,8 @@ p {
 
 .marketing-video {
   filter: brightness(115%) hue-rotate(-4deg) saturate(100%);
+  margin: auto;
+  width: 90%;
 }
 
 /* =============================================== */ 
