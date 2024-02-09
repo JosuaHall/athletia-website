@@ -5,6 +5,7 @@ import IconList from "./components/IconList";
 import AppExampleScreen from "./components/AppExampleScreen";
 import Impressum from "./components/Impressum";
 import MarketingVideo from "./components/MarketingVideo";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header></Header>
       </header>
       <LandingPage />
+      <Reviews />
       <IconList />
       <h2 id="title">How to setup your Organization</h2>
       <AppExampleScreen />

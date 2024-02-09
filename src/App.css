@@ -4,6 +4,7 @@
   text-align: center;
   color: #fff;
   display: block;
+  overflow: hidden;
 }
 
 
@@ -26,8 +27,8 @@ p {
   }
 
 .header img {
-  width: 70px;
-  padding-top: 10px;
+  width: 80px;
+  padding-top: .2em;
 }
 /* ======================================================== */
 
@@ -100,6 +101,84 @@ p {
 /*================================================*/
 
 
+/* ============= REVIEWS STYLES ==================*/
+
+/* Ensure swiper container is relative */
+.swiper-container {
+  position: relative;
+}
+
+/* Align navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure navigation buttons are above other content */
+}
+
+/* Position left button */
+.swiper-button-prev {
+  left: 10px; /* Adjust as needed */
+}
+
+/* Position right button */
+.swiper-button-next {
+  right: 10px; /* Adjust as needed */
+}
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  background-color: rgb(77 114 190);
+  padding: 1em;
+  overflow: hidden;
+  transform: skewX(-10deg); /* Adjust the skew angle as needed */
+}
+
+/* Reset the skew for the card content */
+.card > * {
+  transform: skewX(10deg); /* Adjust the skew angle to match the card */
+}
+
+.review-area {
+  height: 50vh;
+  margin-top: 10em;
+}
+
+.quote {
+  padding: 1em;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  align-self: baseline;
+}
+
+.profile-image {}
+
+.profile-image img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  text-align: left;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.profile-school {}
+
+/* ===============================================*/
+
 /* ============== ICONLIST STYLES ================ */
 .icon-list-grid-container{
   display: grid;
@@ -107,13 +186,19 @@ p {
   height: 50vh;
   gap: 2em;
   padding: 2em;
-  margin-top: 10em;
+  margin-top: 5em;
 }
 
 .icon-list-grid-container :nth-child(2){
   margin-bottom: 3em;
 }
 
+.icon-list-grid-container :nth-child(1){
+  margin-top: .5em;
+}
+.icon-list-grid-container :nth-child(3){
+  margin-top: .5em;
+}
 
 /*list-item-styles*/
 .list-item{
@@ -158,7 +243,7 @@ p {
   transition: transform 0.3s ease-in-out; /* Smoother transition */
   padding: .5em;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 
@@ -169,10 +254,12 @@ p {
 }
 
 .phone-container-text-area {
+  top: 0;
   display:none;
 }
 
 .phone-container-number{
+  margin-bottom: 5px;
   display: none;
 }
 
@@ -230,7 +317,7 @@ p {
   }
 
   #title {
-    padding-bottom: "3.5em";
+    padding-bottom: .5em;
     padding: 0 .5em;
   }
 
@@ -305,6 +392,50 @@ p {
 
 /*================================================*/
 
+/*===========REVIEW STYLES============================*/
+/* Align navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+/* Position left button */
+.swiper-button-prev {
+  display: none;
+}
+
+/* Position right button */
+.swiper-button-next {
+  display: none;
+}
+
+.review-area {
+  height: 10vh;
+  padding-top: 10em;
+  margin: 0 auto;
+  margin-top: 6em;
+  width: 90%;
+}
+
+.card {
+  grid-template-rows: 2fr 1fr;
+}
+
+
+.profile-image {
+  padding-left: 1em;
+}
+
+.profile-text{
+  font-size: smaller;
+}
+
+.quote {
+  padding: 1em 2em;
+}
+
+/*=================================================*/
+
 /* ============== ICONLIST STYLES ================ */
 .icon-list-grid-container{
   display: grid;
@@ -354,7 +485,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -413,7 +544,7 @@ p {
 @media only screen and (min-width: 768px) {
   /* Add styles specific to tablets and larger devices */
   #title {
-    padding-bottom: "3.5em";
+    padding-bottom: 0;
   }
 
   /* ================== LANDING PAGE STYLE ================== */
@@ -426,51 +557,65 @@ p {
 }
 /*================================================*/
 
+/*===========REVIEW STYLES============================*/
+
+.profile-image {
+  padding-left: 1em;
+}
+
+.profile-text{
+  font-size: smaller;
+}
+
+/*=================================================*/
+
 /* ============== Phone Container STYLES =========== */
 .example-screens-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 2em auto;
 }
 
-
 .phone-container {
-  position: relative; /* Add position relative for containing absolutely positioned elements */
+  position: relative;
   transition: transform 0.3s ease-in-out; /* Smoother transition */
   padding: .5em;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
-  margin-top: 2em;
+  padding-top: 0;
 }
 
 .phone-container-img img {
-  padding-top: 10%;
+  padding-top: 2%;
   padding-bottom: 20%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .phone-container:hover {
-  transform: translateY(-50px); /* Move the card slightly upwards on hover */
+  transform: translateY(5px); /* Move the card slightly upwards on hover */
 }
 
+.phone-container-text-area {
+  display: none; /* Initially hide the text area */
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity 1s ease-in-out; /* Fade-in transition */
+  padding-bottom: 5px;
+}
 
 .phone-container:hover .phone-container-text-area {
-  bottom: 0;
-  display: block;
-  position: absolute;
+  display: block; /* Show the text area on hover */
+  opacity: 1; /* Fade-in effect */
+  position: relative;
   margin-top: 1em;
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
+  transform: translateY(-70);
 }
 
-.phone-container:hover .phone-container-text-area {
-  transform: translateY(0); /* Move text area up on hover */
-}
 
 
 /* =============================================== */
@@ -481,7 +626,7 @@ p {
 @media only screen and (min-width: 1024px) {
   /* Add styles specific to desktops and larger devices */
   #title {
-    padding-bottom: "3.5em";
+    padding-bottom: 0;
   }
 
   #ios-download-button img :hover{
@@ -489,72 +634,85 @@ p {
   }
 
   /* ============== Phone Container STYLES =========== */
-.example-screens-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1em;
-  max-width: 80%;
-  margin: auto;
-  height: 100vh;
-}
-
-.phone-container {
-  position: relative; /* Add position relative for containing absolutely positioned elements */
-  transition: transform 0.3s ease-in-out; /* Smoother transition */
-  padding: .5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone-container:hover {
-  transform: translateY(-70px); /* Move the card slightly upwards on hover */
-}
-
-
-.phone-container:hover .phone-container-text-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  padding-top: 0em;
-  left: 0;
-  width: 100%;
-  transform: translateY(0); /* Add a slight offset to avoid overlap */
-  transition: transform 0.3s ease-in-out;
-}
-
-
-
-.phone-container-img img {
-  width: 100%; /* Adjust image width to fit container */
-}
-
-
-
-.phone-container:hover .phone-container-text-area {
-  transform: translateY(-10); /* Move text area up on hover */
-}
-
-.phone-container-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 1em;
-}
-
-.phone-container-text-area-heading {
-  color: #598BD8; 
-}
-
-.phone-container-text-area-text {
-  margin: 0;
-  color: #fff
-}
+  .example-screens-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0em;
+    max-width: 90%;
+    margin: auto;
+    padding: 2em 0;
+  }
+  
+  .phone-container {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Smoother transition */
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .phone-container:hover {
+    transform: translateY(-10px); /* Move the card slightly upwards on hover */
+  }
+  
+  .phone-container:hover .phone-container-text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(0); /* Move text area up on hover */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .phone-container-img img {
+    width: 100%; /* Adjust image width to fit container */
+  }
+  
+  .phone-container-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .phone-container-text-area-heading {
+    color: #598BD8; 
+  }
+  
+  .phone-container-text-area-text {
+    margin: 0;
+    color: #fff;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.5s ease-in-out; /* Fade-in transition */
+    padding-bottom: 5px;
+  }
+  
+  .phone-container:hover .phone-container-text-area-text {
+    opacity: 1; /* Fade-in effect */
+  }
+  
 
 /* =============================================== */
+
+/* ============== ICONLIST STYLES ================ */
+.icon-list-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  gap: 1em;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+.icon-list-grid-container :nth-child(2){
+  margin-bottom: 3em;
+}
+
 }
 
 
@@ -562,12 +720,74 @@ p {
 @media only screen and (min-width: 1324px) {
   /* Add styles specific to desktops and larger devices */
   #title {
-    padding-bottom: "3.5em";
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   #ios-download-button img :hover{
     cursor: pointer;
   }
+
+  /* ============= REVIEWS STYLES ==================*/
+.review-area {
+  height: 10vh;
+  margin-top: 0;
+}
+
+.quote{
+  padding: 1em 2em;
+}
+
+
+/* ===============================================*/
+
+/* ============== ICONLIST STYLES ================ */
+.icon-list-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 40vh;
+  gap: 1em;
+  padding: 0;
+  margin-top: 15em;
+}
+
+.icon-list-grid-container :nth-child(2){
+  margin-bottom: 3em;
+}
+
+.icon-list-grid-container :nth-child(1){
+  margin-top: .5em;
+}
+.icon-list-grid-container :nth-child(3){
+  margin-top: .5em;
+}
+
+/*list-item-styles*/
+.list-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.list-item-icon{
+
+}
+
+.list-item-text-area{
+
+}
+.list-item-heading{
+  color: #598BD8;
+}
+.list-item-text{
+  color: #F9FCFF;
+}
+/********************/
+
+
+
+/*=========================================*/
 
   /* ============== Phone Container STYLES =========== */
 .example-screens-container {
@@ -578,4 +798,6 @@ p {
   margin: auto;
   height: 90vh;
 }
+
+
 }

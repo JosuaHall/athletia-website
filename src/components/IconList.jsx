@@ -3,14 +3,22 @@ import ListItem from "./IconListComponents/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const handshakeIcon = (
-  <FontAwesomeIcon color={"#FFD700"} icon="fa-solid fa-handshake" size={"2x"} />
+  <FontAwesomeIcon
+    color={"rgb(247 191 46)"}
+    icon="fa-solid fa-handshake"
+    size={"2x"}
+  />
 );
 const rocketIcon = (
-  <FontAwesomeIcon color={"#FFA500"} icon="fa-solid fa-rocket" size={"2x"} />
+  <FontAwesomeIcon
+    color={"rgb(247 191 46)"}
+    icon="fa-solid fa-rocket"
+    size={"2x"}
+  />
 );
 const phoneIcon = (
   <FontAwesomeIcon
-    color={"#009999"}
+    color={"rgb(247 191 46)"}
     icon="fa-solid fa-mobile-screen-button"
     size={"2x"}
   />
