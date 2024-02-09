@@ -441,8 +441,8 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   height: 50vh;
-  gap: 2em;
-  padding: 2em;
+  gap: 0em;
+  padding: 4em 2em;
   margin-top: 10em;
   height: 100vh;  
 }

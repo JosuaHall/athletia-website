@@ -22,14 +22,14 @@ const reviews = [
   },
   {
     quote:
-      "''My mom has always struggled to find the live streams to my games, and now it's easy! My whole family loves it!''",
+      "''A must-have for any sports fan at any university - I can quickly check upcoming games on campus and also see which other students are going to watch.''",
     image: emil,
     name: "Emil Jönsson",
     school: "Student athlete / CSU-Pueblo",
   },
   {
     quote:
-      "''A must-have for any sports fan at any university - I can quickly check upcoming games on campus and also see which other students are going to watch.''",
+      "''My mom has always struggled to find the live streams to my games, and now it's easy! My whole family loves it!''",
     image: kathlin,
     name: "Kaitlin Bean",
     school: "Student athlete / CSU-Pueblo",
