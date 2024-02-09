@@ -31,7 +31,7 @@ const reviews = [
     quote:
       "''A must-have for any sports fan at any university - I can quickly check upcoming games on campus and also see which other students are going to watch.''",
     image: kathlin,
-    name: "Kathlin Bean",
+    name: "Kaitlin Bean",
     school: "Student athlete / CSU-Pueblo",
   },
   {
