@@ -9,7 +9,7 @@ function Impressum() {
         <img src={app} alt="" width={100} />
       </div>
       <div>
-        <h4>Contact us at support@athletia.com</h4>
+        <h4>Contact us at support@athletia.app</h4>
       </div>
       <div>
         <p>
