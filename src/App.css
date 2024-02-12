@@ -7,6 +7,12 @@
   overflow: hidden;
 }
 
+iframe{
+  width: 90% !important;
+  margin: 2em auto !important;
+  max-width: 540px !important;
+}
+
 
 
 p {
