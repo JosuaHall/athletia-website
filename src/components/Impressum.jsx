@@ -9,13 +9,13 @@ function Impressum() {
       <div style={{ marginTop: "3em" }}>
         <img src={app} alt="" width={100} />
       </div>
-      <div>
+      {/*<div>
         <h2 style={{ marginBottom: "1em" }}>Follow us on Instagram</h2>
         <a
           href="https://www.instagram.com/athletia.app/?utm_source=ig_embed&amp;utm_campaign=loading"
           style={{
             background:
-              "linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)", // Instagram gradient colors
+              "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)", // Instagram gradient colors
             display: "inline-block",
             lineHeight: 0,
             padding: ".5em 0.7em",
@@ -26,9 +26,9 @@ function Impressum() {
           rel="noreferrer noopener"
         >
           <FontAwesomeIcon icon={faInstagram} size="4x" color="#fff" />{" "}
-          {/* Instagram icon */}
+          {/* Instagram icon 
         </a>
-      </div>
+        </div>*/}
 
       <div>
         <h4>Contact us at support@athletia.app</h4>
